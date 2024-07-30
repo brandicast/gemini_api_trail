@@ -8,6 +8,10 @@ https://ai.google.dev/gemini-api/docs
 
 https://ai.google.dev/api?lang=python
 
+## Google AI Studio
+
+https://aistudio.google.com
+
 
 ## Note
 
