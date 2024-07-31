@@ -16,7 +16,10 @@ https://aistudio.google.com
 ## Note
 
 - Project_0
-    A test with nodejs.  But example isn't working.
+    A test with nodejs.  But example isn't working.  
+    2024/07/31  Turn out to be my node version it outdated.  Works after upgrading node.
 
 - Porject_1
     Test with Python following the guide. 
+
+
