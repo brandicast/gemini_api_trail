@@ -22,6 +22,9 @@ https://aistudio.google.com
 - Porject_1
     Test with Python following the guide. 
 
+- Project_2
+    bridging gemini thru flask web service
+
 
 ## To Dos
 
