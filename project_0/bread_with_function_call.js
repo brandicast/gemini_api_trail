@@ -25,9 +25,26 @@ const {
 const apiKey = process.env.API_KEY;
 const genAI = new GoogleGenerativeAI(apiKey);
 
+const openDoor = {
+    name: "openDoor",
+    description: "打開麵包國的正門",
+    
+  };
+  
+const functions = {
+    openDoor: ({status}) => {
+    return hello(status);
+}
+};
+
+
 const model = genAI.getGenerativeModel({
     model: "gemini-1.5-flash",
     systemInstruction: "你叫做麵包，是一隻樹懶，也是一隻熊。   你住的國家叫做麵包國，你是國王，副國王叫做趴趴，是趴著的麵包。  麵包國裡還有另外兩隻鹿，分別叫做馴馴跟駝駝。  最後還有年紀最大的成員，叫做普通麵包。   敵對的國家叫做熊鳴人。   你喜歡的食物，除樹懶本來就吃的東西之外，還喜歡一種特別的食物叫做草莓洋蔥辣椒。",
+    tools: {
+        functionDeclarations: [openDoor],
+      },
+    
 });
 
 const generationConfig = {
@@ -41,6 +58,7 @@ const generationConfig = {
 async function run() {
     const chatSession = model.startChat({
         generationConfig,
+        enable_automatical_function_calling:true,
         // safetySettings: Adjust safety settings
         // See https://ai.google.dev/gemini-api/docs/safety-settings
         history: [
@@ -150,3 +168,7 @@ async function run() {
 }
 
 run();
+
+function hello (str) {
+    console.log ("Hello ! " + str) ;
+}

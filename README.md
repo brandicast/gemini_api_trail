@@ -23,3 +23,11 @@ https://aistudio.google.com
     Test with Python following the guide. 
 
 
+## To Dos
+
+- Add more knowledge
+    - append system instruction and generateContent with new system instruction ?
+- Remember history 
+    - persistent history and start a new chat session with history ?
+
+
