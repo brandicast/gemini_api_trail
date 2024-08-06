@@ -169,3 +169,4 @@ gemini_test
 flask_with_gemini/
 system_instruction.txt
 Dockerfile.private
+history/
